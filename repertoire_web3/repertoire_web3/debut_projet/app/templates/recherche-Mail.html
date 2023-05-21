@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" 
+    href="{{ url_for( 'static', filename='recherche-Mail.css' ) }}" />
+    <!--link href="/debut_projet/app/static/recherche-Mail.css" rel="stylesheet"-->
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- background -->
+    <div class="background">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Formulaire -->
+    <form action = "{{ url_for('requete') }}" method = "POST">
+      <h1>Je recherche un mail</h1>
+      <div class="inputs">
+        <select class="critères" name="champ" id="champ">
+          <option value="prenom">Prénom</option>
+          <option value="nom">Nom</option>
+          <option value="email">Email</option>
+          <option value="adresse">Adresse</option>
+          <option value="ville">Ville</option>
+          <option value="codepostal">Code postal</option>
+        </select>
+        <input type="text" name = "motcle" id = "motcle" placeholder="Taper le critère de recherche..." />
+      </div>
+
+      <!-- Paragraphe avec lien -->
+      <p class="inscription">J'enregistre mon <span><a class="Mail" href='{{ url_for("main") }}'>&ensp;Mail</a></span></p>
+
+      <!-- Bouton -->
+      <div>
+        <button type="submit">Valider</button>
+      </div>
+    </form>
+
+</body>
+</html>

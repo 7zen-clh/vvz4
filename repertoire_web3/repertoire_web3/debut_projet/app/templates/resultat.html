@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" 
+    href="{{ url_for( 'static', filename='resultat.css' ) }}" />
+</head>
+<body>
+
+        <!-- background -->
+        <div class="background">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+
+    <form>
+        <h1>Ajout de la personne dans la db: </h1>
+        <div aligne="center">
+            <p>{{ msg }}</p>
+        </div>
+    </form>
+    
+    <a href = "/"><br><br><br><br>Retourner à la page d'accueil</a><br>
+    
+</body>
+</html>
